@@ -1,21 +1,24 @@
 .sidebar {
   width: 260px;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
 }
+
 body.dark .sidebar {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
+
 .profile-section {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .avatar {
   background: var(--primary);
   color: #fff;
@@ -29,10 +32,12 @@ body.dark .sidebar {
   font-weight: bold;
   font-size: 20px;
 }
+
 .muted {
   font-size: 13px;
   color: #666;
 }
+
 .theme-switch {
   margin-top: auto;
   border: 1px solid rgb(131, 120, 120);
@@ -41,6 +46,7 @@ body.dark .sidebar {
   display: flex;
   justify-content: space-between;
 }
+
 .sidebar button {
   background: var(--primary);
   color: #fff;
@@ -50,47 +56,56 @@ body.dark .sidebar {
   font-weight: bold;
   cursor: pointer;
 }
-.btn{
+
+.btn {
   margin-bottom: 15px;
 }
+
 .sidebar button:hover {
   background: var(--secondary);
 }
+
 .chat-history {
   margin-top: 10px;
   flex: 1;
   overflow-y: auto;
-  max-height: 500px; 
+  max-height: 500px;
 }
+
 .chat-history h4 {
   margin-bottom: 8px;
   font-size: 14px;
   color: #444;
 }
+
 .chat-history ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .chat-history li {
   padding: 8px 10px;
   margin-bottom: 6px;
   border-radius: 6px;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .chat-history li:hover {
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.15);
 }
+
 .delete-chat {
   background: transparent;
   border: none;
   color: #e74c3c;
   cursor: pointer;
 }
+
 .clear-btn {
   background: #e74c3c;
   color: #fff;
@@ -101,6 +116,7 @@ body.dark .sidebar {
   cursor: pointer;
   font-weight: bold;
 }
+
 .clear-btn:hover {
   background: #c0392b;
 }
@@ -119,13 +135,58 @@ body.dark .sidebar {
   background: #c0392b;
 }
 
-option, select{
+option,
+select {
   cursor: pointer;
   padding: 3px;
 }
 
-li{
+li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+/* Hide sidebar on mobile by sliding left */
+@media (max-width: 450px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%); /* hidden by default */
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* visible */
+  }
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  transition: background 0.3s;
+  z-index: 1101; /* above sidebar */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.hamburger:hover {
+  background: var(--secondary);
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 450px) {
+  .hamburger {
+    display: block;
+  }
 }
