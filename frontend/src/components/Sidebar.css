@@ -1,0 +1,131 @@
+.sidebar {
+  width: 260px;
+  background: rgba(255,255,255,0.75);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+}
+body.dark .sidebar {
+  background: rgba(0,0,0,0.4);
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.avatar {
+  background: var(--primary);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.muted {
+  font-size: 13px;
+  color: #666;
+}
+.theme-switch {
+  margin-top: auto;
+  border: 1px solid rgb(131, 120, 120);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn{
+  margin-bottom: 15px;
+}
+.sidebar button:hover {
+  background: var(--secondary);
+}
+.chat-history {
+  margin-top: 10px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 500px; 
+}
+.chat-history h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+.chat-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.chat-history li {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-history li:hover {
+  background: rgba(0,0,0,0.15);
+}
+.delete-chat {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+}
+.clear-btn {
+  background: #e74c3c;
+  color: #fff;
+  margin-top: 10px;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+.signout-btn {
+  margin-top: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signout-btn:hover {
+  background: #c0392b;
+}
+
+option, select{
+  cursor: pointer;
+  padding: 3px;
+}
+
+li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,50 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+}
+body.dark .modal {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid white;
+}
+.modal label {
+  display: block;
+  margin: 12px 0;
+}
+.modal input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.actions button {
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+.actions button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}

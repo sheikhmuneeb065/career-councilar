@@ -1,0 +1,28 @@
+.header {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(8px);
+}
+body.dark .header {
+  background: rgba(0, 0, 0, 0.3);
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  font-size: 36px;
+  margin-right: 12px;
+}
+.tagline {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+}
+body.dark .tagline {
+  color: #cfd9df;
+}

@@ -1,0 +1,25 @@
+:root {
+  --bg-light: linear-gradient(135deg, #d0f0e0, #f6fbf8);
+  --bg-dark: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --text-light: #05202b;
+  --text-dark: #e6f7f2;
+  --primary: #2dbf7b;
+  --secondary: #1a8960;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.5s, color 0.5s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
