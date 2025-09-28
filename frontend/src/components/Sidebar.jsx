@@ -13,7 +13,7 @@ export default function Sidebar({
   onDeleteChat,
   onSignOut,
 }) {
-  const [isOpen, setIsOpen] = useState(false); // sidebar toggle
+  const [isOpen, setIsOpen] = useState(false); 
   const userName = profile.name || "Guest";
   const userEducation = profile.education || "No profile set";
 

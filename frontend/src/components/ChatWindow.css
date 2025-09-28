@@ -105,3 +105,16 @@ body.dark .composer {
 body.dark .label {
   color: #ddd;
 }
+.empty-chat{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+body.dark .empty-chat{
+  color: #2dbf7b;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
